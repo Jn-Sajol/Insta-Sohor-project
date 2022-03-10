@@ -27,7 +27,8 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  // console.log(text)
+    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -51,7 +52,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  // console.log(post)
+  // console.log(post.description)
     const image = post.image;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
